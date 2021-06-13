@@ -1,28 +1,34 @@
 <template>
+  <!-- 感觉这里这个id=app多余了，有点让人混淆，容易误导，真正的id=app的div应该在html上 -->
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <section class="todoapp">
+      <!-- 头部 -->
+      <todoHead></todoHead>
+
+      <!-- 列表部分 -->
+      <todoList></todoList>
+
+      <!-- 底部 -->
+      <todoFooter></todoFooter>
+
+    </section>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// 引入组件
+import todoHead from './components/todoHead.vue'
+import todoList from './components/todoList.vue'
+import todoFooter from './components/todoFooter.vue'
+
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    todoHead, todoList, todoFooter
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
